@@ -1,0 +1,3 @@
+class AppDialog {
+  void show() {}
+}

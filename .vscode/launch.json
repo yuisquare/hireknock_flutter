@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Hireknock mobile",
+            "request": "launch",
+            "type": "dart",
+            "args": [],
+        },
+    ]
+}
+
+// flutter build apk
+// flutter build appbundle
+// flutter build ipa
