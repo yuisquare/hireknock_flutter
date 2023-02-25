@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_storage/get_storage.dart';
@@ -13,7 +14,7 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  // await Firebase.initializeApp();
+  await Firebase.initializeApp();
   // FirebaseMessaging.onBackgroundMessage(_backgroundMessageHandler);
 
   // await EnvService.toProd();

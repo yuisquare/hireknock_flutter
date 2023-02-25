@@ -40,12 +40,12 @@ class HImage extends StatelessWidget {
           height: height,
           fit: fit,
           errorWidget: (context, _, __) {
-            return Image.asset(AppImage.baseUrl + 'AppImage.defaultMan');
+            return Image.asset(AppImage.baseUrlImages + 'AppImage.defaultMan');
           },
         );
       case ImageType.asset:
         return Image.asset(
-          AppImage.baseUrl + path,
+          path,
           width: width,
           height: height,
           fit: fit,

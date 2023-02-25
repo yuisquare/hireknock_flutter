@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hire_knock/app_constants/app_colors.dart';
-import 'package:hire_knock/app_constants/app_size.dart';
+import 'package:hire_knock/app_constants/app_images.dart';
 import 'package:hire_knock/controllers/auth_controller/auth_controller.dart';
 import 'package:hire_knock/controllers/login_controller/login_controller.dart';
 import 'package:hire_knock/utils/utils.dart';
@@ -11,11 +11,10 @@ import 'package:hire_knock/widgets/checkbox/h_checkbox.dart';
 import 'package:hire_knock/widgets/container/h_container.dart';
 import 'package:hire_knock/widgets/image/h_image.dart';
 import 'package:hire_knock/widgets/input/h_input_text_field.dart';
-import 'package:hire_knock/widgets/progress/h_progress_indicator.dart';
 import 'package:hire_knock/widgets/spacing/h_space.dart';
 import 'package:hire_knock/widgets/text/h_text.dart';
 
-// final _authController = Get.put(AuthController());
+final _authController = Get.put(AuthController());
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -29,9 +28,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   void initState() {
-    // Future.delayed(Duration.zero, () {
-    //   _authController.checkForUpdate();
-    // });
     super.initState();
   }
 
@@ -149,23 +145,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      HContainer(
-                        shape: BoxShape.circle,
-                        width: 50,
-                        height: 50,
-                        color: AppColor.fieldColor,
+                      _buildLoginWithOther(
+                        LoginType.google,
+                        AppImage.googleIcon,
                       ),
-                      HContainer(
-                        shape: BoxShape.circle,
-                        width: 50,
-                        height: 50,
-                        color: AppColor.fieldColor,
+                      _buildLoginWithOther(
+                        LoginType.apple,
+                        AppImage.appleIcon,
                       ),
-                      HContainer(
-                        shape: BoxShape.circle,
-                        width: 50,
-                        height: 50,
-                        color: AppColor.fieldColor,
+                      _buildLoginWithOther(
+                        LoginType.facebook,
+                        AppImage.facebookIcon,
                       ),
                     ],
                   ),
@@ -229,6 +219,27 @@ class _LoginScreenState extends State<LoginScreen> {
         ],
       );
     });
+  }
+
+  Widget _buildLoginWithOther(LoginType loginType, String path) {
+    return InkWell(
+      onTap: () async {
+        await _authController.login(loginType);
+      },
+      child: HContainer(
+        shape: BoxShape.circle,
+        padding: const EdgeInsets.all(10),
+        width: 56,
+        height: 56,
+        color: AppColor.fieldColor,
+        child: HImage(
+          imageType: ImageType.asset,
+          path: AppImage.baseUrlIcons + path,
+          height: 16,
+          width: 16,
+        ),
+      ),
+    );
   }
 
   Widget _buildToggleText({

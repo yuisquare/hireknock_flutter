@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "212619826724",
+    "project_id": "hireknock-f401c",
+    "storage_bucket": "hireknock-f401c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212619826724:android:7e5de385990b0684822ab1",
+        "android_client_info": {
+          "package_name": "com.usquare.hire_knock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212619826724-311gggt2pnl83fu02am4oemqjkk5v86l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.usquare.hire_knock",
+            "certificate_hash": "9f0a03c61811bb632e1f23c359aa75a66f931407"
+          }
+        },
+        {
+          "client_id": "212619826724-0dnop37lq327hs2et27ebsn5k8llmfe7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNJhgJuuNmWRVx1x2jfIquDkMLc3hh0RI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212619826724-0dnop37lq327hs2et27ebsn5k8llmfe7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

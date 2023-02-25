@@ -5,26 +5,26 @@ import 'package:hire_knock/controllers/user_account_controller/user_account_cont
 import '../../app_route/app_router.gr.dart';
 import '../../app_services/navigator_service.dart';
 
-// final _authController = Get.put(AuthController());
-// final _userController = Get.put(UserAccountController());
+final _authController = Get.put(AuthController());
+final _userController = Get.put(UserAccountController());
 
 class SplashController {
   static void isApiInitialized() async {
     // await _authController.checkForUpdate();
-    // bool isInitialized = HireKnockApiService.isInitialized();
+    bool isInitialized = HireKnockApiService.isInitialized();
     await Future.delayed(Duration(seconds: 1));
-    // if (isInitialized) {
-    //   if (_authController.isLoggedIn()) {
-    //     if (_userController.userData.value?.isPhoneVerified ?? false) {
-    //       NavigatorService.replaceAll([HomeScreen()]);
-    //     } else {
-    //       // NavigatorService.replaceAll([SignupScreen()]);
-    //     }
-    //   } else {
+    if (isInitialized) {
+      if (_authController.isLoggedIn()) {
+        if (_userController.userData.value?.isPhoneVerified ?? false) {
+          NavigatorService.replaceAll([HomeScreen()]);
+        } else {
+          // NavigatorService.replaceAll([SignupScreen()]);
+        }
+      } else {
         NavigatorService.replaceAll([LoginScreen()]);
-    //   }
-    // } else {
-    //   NavigatorService.replaceAll([EnvErrorScreen()]);
-    // }
+      }
+    } else {
+      NavigatorService.replaceAll([EnvErrorScreen()]);
+    }
   }
 }

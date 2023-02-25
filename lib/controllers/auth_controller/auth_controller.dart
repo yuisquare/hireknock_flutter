@@ -22,6 +22,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 enum LoginType {
   google,
   apple,
+  facebook,
   emailPassword,
 }
 
@@ -37,8 +38,13 @@ class AuthController extends GetxController {
         isLoggedIn = await loginWithGoogle();
         break;
       case LoginType.apple:
+        print('Login with apple');
+        break;
+      case LoginType.facebook:
+        print('Login with facebook');
         break;
       case LoginType.emailPassword:
+        print('Login with email password');
         break;
     }
     if (isLoggedIn) {
@@ -143,7 +149,7 @@ class AuthController extends GetxController {
         content: Padding(
           padding: const EdgeInsets.all(8.0),
           child: HText(
-            text:forcedMessage,
+            text: forcedMessage,
             textAlign: TextAlign.center,
           ),
         ),
@@ -152,9 +158,9 @@ class AuthController extends GetxController {
               ? const Offstage()
               : TextButton(
                   onPressed: Get.back,
-                  child:const HText(
-                    text:'Cancel',
-                      color: Colors.black,
+                  child: const HText(
+                    text: 'Cancel',
+                    color: Colors.black,
                   ),
                 ),
           ElevatedButton(
@@ -164,7 +170,7 @@ class AuthController extends GetxController {
               ),
             ),
             child: const HText(
-              text:'Update',
+              text: 'Update',
               color: Colors.black,
             ),
             onPressed: () async {

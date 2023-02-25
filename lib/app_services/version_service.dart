@@ -11,7 +11,7 @@ class VersionService{
     try {
       DocumentSnapshot<Map<String, dynamic>> documentSnapshot = await firestore
           .collection('versionUpdates')
-          .doc('institute_version')
+          .doc('hireknock_version')
           .get();
       if (documentSnapshot.data() != null &&
           documentSnapshot.data()!.isNotEmpty) {
