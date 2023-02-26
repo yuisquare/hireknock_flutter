@@ -13,8 +13,8 @@ class LoginController extends GetxController {
 
   bool isValidated() {
     bool emailValid = RegExp(
-            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-        .hasMatch(emailController.text);
+      r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
+    ).hasMatch(emailController.text);
     if (!isLogin.value && nameController.text.length < 4) return false;
 
     if (!emailValid) return false;
