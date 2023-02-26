@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:hire_knock/api_services/user_api_service.dart';
@@ -28,6 +29,7 @@ enum LoginType {
 
 class AuthController extends GetxController {
   FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+  FacebookAuth facebookAuth = FacebookAuth.instance;
   GoogleSignIn googleSign = GoogleSignIn();
   final _userAccountController = Get.put(UserAccountController());
 
@@ -41,7 +43,7 @@ class AuthController extends GetxController {
         print('Login with apple');
         break;
       case LoginType.facebook:
-        print('Login with facebook');
+        isLoggedIn = await loginWithFacebook();
         break;
       case LoginType.emailPassword:
         print('Login with email password');
@@ -52,6 +54,22 @@ class AuthController extends GetxController {
     } else {
       AppSnackbar.show(message: 'Login failed', snackType: SnackType.error);
     }
+  }
+
+  Future<bool> loginWithFacebook() async {
+    // var data = await facebookAuth.getUserData();
+    // print(data);
+    final LoginResult loginResult = await facebookAuth.login(
+      permissions: ['email', 'public_profile'],
+    );
+
+    if (loginResult.accessToken == null) return false;
+    final OAuthCredential facebookAuthCredential =
+        FacebookAuthProvider.credential(loginResult.accessToken!.token);
+    var credential =
+        await firebaseAuth.signInWithCredential(facebookAuthCredential);
+    print(credential.user?.uid);
+    return false;
   }
 
   Future<UserData?> _getUserData(String id) async {

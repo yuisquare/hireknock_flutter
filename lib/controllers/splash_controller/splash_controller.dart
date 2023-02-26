@@ -11,20 +11,20 @@ final _userController = Get.put(UserAccountController());
 class SplashController {
   static void isApiInitialized() async {
     // await _authController.checkForUpdate();
-    bool isInitialized = HireKnockApiService.isInitialized();
-    await Future.delayed(Duration(seconds: 1));
-    if (isInitialized) {
-      if (_authController.isLoggedIn()) {
-        if (_userController.userData.value?.isPhoneVerified ?? false) {
-          NavigatorService.replaceAll([HomeScreen()]);
-        } else {
-          // NavigatorService.replaceAll([SignupScreen()]);
-        }
-      } else {
-        NavigatorService.replaceAll([LoginScreen()]);
-      }
-    } else {
-      NavigatorService.replaceAll([EnvErrorScreen()]);
-    }
+    // bool isInitialized = HireKnockApiService.isInitialized();
+    // await Future.delayed(Duration(seconds: 1));
+    // if (isInitialized) {
+    // if (_authController.isLoggedIn()) {
+    //   if (_userController.userData.value?.isPhoneVerified ?? false) {
+    //     NavigatorService.replaceAll([HomeScreen()]);
+    //   } else {
+    //     // NavigatorService.replaceAll([SignupScreen()]);
+    //   }
+    // } else {
+    NavigatorService.replaceAll([LoginScreen()]);
+    //   }
+    // } else {
+    //   NavigatorService.replaceAll([EnvErrorScreen()]);
+    // }
   }
 }
