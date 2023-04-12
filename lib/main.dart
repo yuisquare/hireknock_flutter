@@ -46,16 +46,16 @@ class _MainAppState extends State<MainApp> {
 
   Widget _buildMatrialApp() {
     SetupController.initializeApiService();
-        // check for saved userData and selected institute
-        SetupController.getSavedUserData();
-        return MaterialApp.router(
-          title: "Hire Knock",
-          routerDelegate: _appRouter.delegate(),
-          routeInformationParser: _appRouter.defaultRouteParser(),
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(),
-          themeMode: ThemeMode.light,
-          scrollBehavior: HScrollBehavior(),
-        );
+    // check for saved userData and selected institute
+    SetupController.getSavedUserData();
+    return MaterialApp.router(
+      title: "Hire Knock",
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(),
+      themeMode: ThemeMode.light,
+      scrollBehavior: HScrollBehavior(),
+    );
   }
 }

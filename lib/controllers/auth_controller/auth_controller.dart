@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'dart:convert';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -94,6 +96,9 @@ class AuthController extends GetxController {
         }
       }
     } on Exception catch (e) {
+      Logger.error('Login error: $e');
+      return false;
+    } catch (e) {
       Logger.error('Login error: $e');
       return false;
     }
