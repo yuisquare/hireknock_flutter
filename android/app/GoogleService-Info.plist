@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>212619826724-q41lcc3odgh05esgraq31aku9ac1tcnq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.212619826724-q41lcc3odgh05esgraq31aku9ac1tcnq</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>212619826724-311gggt2pnl83fu02am4oemqjkk5v86l.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCsqKP_NzxK_J2QYclnjyJCiLNpd1yZ6mw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>212619826724</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.hireKnock</string>
+	<key>PROJECT_ID</key>
+	<string>hireknock-f401c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hireknock-f401c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:212619826724:ios:80b4d843ca617181822ab1</string>
+</dict>
+</plist>
