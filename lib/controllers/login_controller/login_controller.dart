@@ -36,7 +36,6 @@ class LoginController extends GetxController {
         email: emailController.text.trim(),
         password: passwordController.text.trim(),
       );
-      AppSnackbar.success('Login successful');
     } else {
       user = await OnboardApiService.signup(
         email: emailController.text.trim(),
@@ -45,7 +44,6 @@ class LoginController extends GetxController {
         mobileNo: '',
         linkedinUrl: '',
       );
-      AppSnackbar.success('Signup successful');
     }
     if (user != null) {
       _userController.selectUser(user);

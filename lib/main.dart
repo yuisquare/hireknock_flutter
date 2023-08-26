@@ -14,7 +14,7 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  await Firebase.initializeApp();
+  // await Firebase.initializeApp();
 
   // await EnvService.toProd();
   await EnvService.toDev();

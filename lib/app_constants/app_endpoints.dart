@@ -10,6 +10,6 @@ class AppEndpoints {
   }
 
   //onboard
-  static String signup = '/signup';
-  static String login = '/login';
+  static String signup = '/onboard/signup';
+  static String login = '/onboard/login';
 }

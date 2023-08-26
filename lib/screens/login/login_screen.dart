@@ -1,4 +1,4 @@
-import 'dart:io';
+// import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -151,11 +151,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         LoginType.google,
                         AppImage.googleIcon,
                       ),
-                      if (Platform.isIOS)
-                        _buildLoginWithOther(
-                          LoginType.apple,
-                          AppImage.appleIcon,
-                        ),
+                      // if (Platform.isIOS)
+                      _buildLoginWithOther(
+                        LoginType.apple,
+                        AppImage.appleIcon,
+                      ),
                       _buildLoginWithOther(
                         LoginType.facebook,
                         AppImage.facebookIcon,
