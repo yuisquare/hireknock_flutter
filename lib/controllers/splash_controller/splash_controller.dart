@@ -14,15 +14,15 @@ class SplashController {
     bool isInitialized = HireKnockApiService.isInitialized();
     await Future.delayed(Duration(seconds: 1));
     if (isInitialized) {
-      // if (_authController.isLoggedIn()) {
-      //   if (_userController.userData.value != null) {
-      //     NavigatorService.replaceAll([HomeScreen()]);
-      //   } else {
-      //     // NavigatorService.replaceAll([SignupScreen()]);
-      //   }
-      // } else {
+      if (_authController.isLoggedIn()) {
+        if (_userController.userData.value != null) {
+          NavigatorService.replaceAll([HomeScreen()]);
+        } else {
+          // NavigatorService.replaceAll([SignupScreen()]);
+        }
+      } else {
         NavigatorService.replaceAll([LoginScreen()]);
-      // }
+      }
     } else {
       NavigatorService.replaceAll([EnvErrorScreen()]);
     }
