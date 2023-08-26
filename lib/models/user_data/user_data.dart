@@ -6,38 +6,29 @@ part 'user_data.g.dart';
 @CopyWith()
 @JsonSerializable()
 class UserData extends Equatable {
+
+  @JsonKey(name:'_id')
   final String? uid;
+
+  final String? fullname;
   final String? email;
-  final String? name;
-  final String? phone;
+
+  @JsonKey(name:'mobile_no')
+  final String? mobileNo;
+
+  @JsonKey(name:'linkedin_link')
+  final String? linkedinUrl;
+
   final String? photoUrl;
-  final String? gender;
-  final bool? isInitialised;
-  final DateTime? dob;
-  final DateTime? createdAt;
-  final DateTime? lastUpdatedAt;
-  final String? notificationToken;
-  final String? state;
-  final String? city;
-  final bool? isPhoneVerified;
-  final String? userStatus;
+
 
   const UserData({
     this.uid,
     this.email,
-    this.name,
-    this.phone,
+    this.fullname,
+    this.linkedinUrl,
+    this.mobileNo,
     this.photoUrl,
-    this.gender,
-    this.dob,
-    this.createdAt,
-    this.lastUpdatedAt,
-    this.isInitialised,
-    this.notificationToken,
-    this.city,
-    this.state,
-    this.isPhoneVerified,
-    this.userStatus,
   });
 
   factory UserData.fromJson(Map<String, dynamic> json) =>

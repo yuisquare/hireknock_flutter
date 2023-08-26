@@ -21,35 +21,6 @@ class UserAccountController extends GetxController {
     AppLoader.close();
   }
 
-  Future<void> updateToken() async {
-    if (!kIsWeb) {
-      Logger.info('updating token');
-      // final FirebaseMessaging _fcm = FirebaseMessaging.instance;
-      // final token = await _fcm.getToken();
-      var notification = PushNotificationService();
-      String? token = await notification.getToken();
-
-      if (userData.value != null &&
-          userData.value?.uid != null &&
-          token != null) {
-        if (userData.value?.notificationToken == null ||
-            userData.value?.notificationToken != token) {
-          bool isUpdated = await UserApiService.updateUserData(
-            userId: userData.value?.uid ?? '',
-            notificationToken: token,
-          );
-          if (isUpdated) {
-            Logger.info('Token updated');
-            UserData user = userData.value!;
-            userData.value = user.copyWith(
-              notificationToken: token,
-            );
-          }
-        }
-      }
-    }
-  }
-
   void selectUser(UserData user) {
     userData = user.obs;
     update(['profile']);

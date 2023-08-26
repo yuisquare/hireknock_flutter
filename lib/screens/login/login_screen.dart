@@ -109,11 +109,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 20.0),
                       child: HCheckbox(
-                        value: controller.isVerified.value,
+                        value: controller.isConfirmed.value,
                         label:
                             'I confirm that I am of legal age, I have read and agree to the Service agreement.',
                         onChecked: (value) {
-                          controller.isVerified.value = value ?? false;
+                          controller.isConfirmed.value = value ?? false;
                         },
                       ),
                     );

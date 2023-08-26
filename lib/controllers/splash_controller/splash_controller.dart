@@ -15,7 +15,7 @@ class SplashController {
     await Future.delayed(Duration(seconds: 1));
     if (isInitialized) {
       if (_authController.isLoggedIn()) {
-        if (_userController.userData.value?.isPhoneVerified ?? false) {
+        if (_userController.userData.value!=null) {
           NavigatorService.replaceAll([HomeScreen()]);
         } else {
           // NavigatorService.replaceAll([SignupScreen()]);

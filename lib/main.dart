@@ -15,16 +15,10 @@ void main() async {
   ]);
 
   await Firebase.initializeApp();
-  // FirebaseMessaging.onBackgroundMessage(_backgroundMessageHandler);
 
   // await EnvService.toProd();
   await EnvService.toDev();
 
-  // if (kReleaseMode) {
-  // await EnvService.toProd();
-  // } else {
-  // await EnvService.toDev();
-  // }
   await GetStorage.init();
 
   runApp(const MainApp());

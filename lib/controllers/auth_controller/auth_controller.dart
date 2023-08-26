@@ -52,7 +52,7 @@ class AuthController extends GetxController {
     if (isLoggedIn) {
       // NavigatorService.push(InstitutesScreen());
     } else {
-      AppSnackbar.show(message: 'Login failed', snackType: SnackType.error);
+      AppSnackbar.error('Login failed');
     }
   }
 
@@ -85,7 +85,7 @@ class AuthController extends GetxController {
             return true;
           } else {
             UserData userData = UserData(
-              name: userAccount.displayName,
+              fullname: userAccount.displayName,
               email: userAccount.email,
               uid: userAccount.uid,
               photoUrl: userAccount.photoURL,

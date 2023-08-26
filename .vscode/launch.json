@@ -2,10 +2,26 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Hireknock mobile",
+            "name": "mobile",
             "request": "launch",
             "type": "dart",
             "args": [],
+        },
+        {
+            "name": "web",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "-d",
+                "chrome",
+                "--web-hostname",
+                "localhost",
+                "--web-port",
+                "5000",
+                "--web-renderer",
+                "canvaskit",
+                "--dart-define=BROWSER_IMAGE_DECODING_ENABLED=false",
+            ],
         },
     ]
 }
