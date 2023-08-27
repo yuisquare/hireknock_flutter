@@ -15,7 +15,6 @@ class HLinkButton extends StatelessWidget {
       child: HText(
         text: text,
         color: Colors.blue,
-        decoration: TextDecoration.underline,
         fontSize: 16,
         fontWeight: FontWeight.w400,
         // fontStyle: FontStyle.italic,

@@ -120,7 +120,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   }),
                   Obx(() {
                     return HButton(
-                      onPress: controller.loginOrRegister,
+                      onPress: () {
+                        if (!controller.isValidated()) return;
+                        controller.loginOrRegister();
+                      },
                       text: controller.isLogin.value ? 'Login' : 'Register',
                       width: double.infinity,
                       height: 45,

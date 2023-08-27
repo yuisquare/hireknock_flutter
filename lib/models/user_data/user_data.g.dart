@@ -15,6 +15,8 @@ abstract class _$UserDataCWProxy {
 
   UserData mobileNo(String? mobileNo);
 
+  UserData photoUrl(String? photoUrl);
+
   UserData uid(String? uid);
 
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserData(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
@@ -28,6 +30,7 @@ abstract class _$UserDataCWProxy {
     String? fullname,
     String? linkedinUrl,
     String? mobileNo,
+    String? photoUrl,
     String? uid,
   });
 }
@@ -51,6 +54,9 @@ class _$UserDataCWProxyImpl implements _$UserDataCWProxy {
   UserData mobileNo(String? mobileNo) => this(mobileNo: mobileNo);
 
   @override
+  UserData photoUrl(String? photoUrl) => this(photoUrl: photoUrl);
+
+  @override
   UserData uid(String? uid) => this(uid: uid);
 
   @override
@@ -66,6 +72,7 @@ class _$UserDataCWProxyImpl implements _$UserDataCWProxy {
     Object? fullname = const $CopyWithPlaceholder(),
     Object? linkedinUrl = const $CopyWithPlaceholder(),
     Object? mobileNo = const $CopyWithPlaceholder(),
+    Object? photoUrl = const $CopyWithPlaceholder(),
     Object? uid = const $CopyWithPlaceholder(),
   }) {
     return UserData(
@@ -85,6 +92,10 @@ class _$UserDataCWProxyImpl implements _$UserDataCWProxy {
           ? _value.mobileNo
           // ignore: cast_nullable_to_non_nullable
           : mobileNo as String?,
+      photoUrl: photoUrl == const $CopyWithPlaceholder()
+          ? _value.photoUrl
+          // ignore: cast_nullable_to_non_nullable
+          : photoUrl as String?,
       uid: uid == const $CopyWithPlaceholder()
           ? _value.uid
           // ignore: cast_nullable_to_non_nullable
@@ -109,6 +120,7 @@ UserData _$UserDataFromJson(Map<String, dynamic> json) => UserData(
       fullname: json['fullname'] as String?,
       linkedinUrl: json['linkedin_link'] as String?,
       mobileNo: json['mobile_no'] as String?,
+      photoUrl: json['photoUrl'] as String?,
     );
 
 Map<String, dynamic> _$UserDataToJson(UserData instance) => <String, dynamic>{
@@ -117,4 +129,5 @@ Map<String, dynamic> _$UserDataToJson(UserData instance) => <String, dynamic>{
       'email': instance.email,
       'mobile_no': instance.mobileNo,
       'linkedin_link': instance.linkedinUrl,
+      'photoUrl': instance.photoUrl,
     };

@@ -37,6 +37,7 @@ dependencies:
   json_annotation: ^4.5.0
   loading_indicator: ^3.1.0
   package_info_plus: ^1.4.2
+  # fl_country_code_picker: ^0.1.5
 
 dev_dependencies:
   auto_route_generator: ^4.0.0
@@ -56,3 +57,4 @@ flutter:
     - .env.prod
     - .env.dev
     - assets/icons/
+    - assets/json/

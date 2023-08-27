@@ -16,6 +16,7 @@ class SplashController {
     if (isInitialized) {
       if (_authController.isLoggedIn()) {
         if (_userController.userData.value != null) {
+          // NavigatorService.replaceAll([SecurityCheckScreen()]);
           NavigatorService.replaceAll([HomeScreen()]);
         } else {
           // NavigatorService.replaceAll([SignupScreen()]);
