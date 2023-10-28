@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:hire_knock/app_services/navigator_service.dart';
+import 'package:hire_knock/core/app_services/navigator_service.dart';
 
 class AppSize {
   static Size mobileSize = const Size(360, 800);

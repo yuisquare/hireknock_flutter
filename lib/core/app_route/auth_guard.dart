@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:get/get.dart';
-import 'package:hire_knock/app_route/app_router.dart';
+import 'package:hire_knock/core/app_route/app_router.dart';
 import 'package:hire_knock/controllers/auth_controller/auth_controller.dart';
 
 final _authController = Get.put(AuthController());

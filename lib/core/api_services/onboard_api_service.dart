@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:hire_knock/app_constants/app_endpoints.dart';
+import 'package:hire_knock/core/app_constants/app_endpoints.dart';
 import 'package:hire_knock/utils/logger.dart';
 import 'package:http/http.dart' as http;
 import 'package:hire_knock/models/user_data/user_data.dart';

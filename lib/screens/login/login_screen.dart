@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hire_knock/app_constants/app_colors.dart';
-import 'package:hire_knock/app_constants/app_images.dart';
+import 'package:hire_knock/core/app_constants/app_colors.dart';
+import 'package:hire_knock/core/app_constants/app_images.dart';
 import 'package:hire_knock/controllers/auth_controller/auth_controller.dart';
 import 'package:hire_knock/controllers/login_controller/login_controller.dart';
 import 'package:hire_knock/utils/utils.dart';

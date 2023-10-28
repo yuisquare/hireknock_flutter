@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:hire_knock/app_constants/app_colors.dart';
+import 'package:hire_knock/core/app_constants/app_colors.dart';
 import 'package:hire_knock/enums/enums.dart';
 import 'package:hire_knock/screens/applied_job/applied_job_screen.dart';
 import 'package:hire_knock/screens/explore_screen/explore_screen.dart';

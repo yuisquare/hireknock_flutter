@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:get/get.dart';
-import 'package:hire_knock/api_services/user_api_service.dart';
-import 'package:hire_knock/app_constants/app_loader.dart';
-import 'package:hire_knock/app_constants/app_storage.dart';
+import 'package:hire_knock/core/api_services/user_api_service.dart';
+import 'package:hire_knock/core/app_constants/app_loader.dart';
+import 'package:hire_knock/core/app_constants/app_storage.dart';
 import 'package:hire_knock/models/user_data/user_data.dart';
 
 

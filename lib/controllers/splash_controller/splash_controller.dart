@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:hire_knock/api_services/hire_knock_api_service.dart';
+import 'package:hire_knock/core/api_services/hire_knock_api_service.dart';
 import 'package:hire_knock/controllers/auth_controller/auth_controller.dart';
 import 'package:hire_knock/controllers/user_account_controller/user_account_controller.dart';
-import '../../app_route/app_router.dart';
-import '../../app_services/navigator_service.dart';
+import '../../core/app_route/app_router.dart';
+import '../../core/app_services/navigator_service.dart';
 
 final _authController = Get.put(AuthController());
 final _userController = Get.put(UserAccountController());

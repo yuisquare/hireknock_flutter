@@ -4,7 +4,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:hire_knock/utils/logger.dart';
 
-import '../../app_constants/app_images.dart';
+import '../../core/app_constants/app_images.dart';
 
 enum ImageType {
   network,

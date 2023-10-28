@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hire_knock/app_constants/app_colors.dart';
+import 'package:hire_knock/core/app_constants/app_colors.dart';
 import 'package:hire_knock/widgets/container/h_container.dart';
 import 'package:hire_knock/widgets/spacing/h_space.dart';
 import 'package:hire_knock/widgets/text/h_text.dart';

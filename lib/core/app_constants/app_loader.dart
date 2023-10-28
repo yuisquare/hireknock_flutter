@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hire_knock/app_services/navigator_service.dart';
+import 'package:hire_knock/core/app_services/navigator_service.dart';
 import 'package:hire_knock/utils/logger.dart';
 import 'package:hire_knock/widgets/progress/h_progress_indicator.dart';
 

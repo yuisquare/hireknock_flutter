@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:get/get.dart';
-import 'package:hire_knock/api_services/hire_knock_api_service.dart';
-import 'package:hire_knock/app_constants/app_storage.dart';
+import 'package:hire_knock/core/api_services/hire_knock_api_service.dart';
+import 'package:hire_knock/core/app_constants/app_storage.dart';
 import 'package:hire_knock/controllers/user_account_controller/user_account_controller.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:hire_knock/models/user_data/user_data.dart';

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:get/get.dart';
-import 'package:hire_knock/app_services/app_local_notification.dart';
+import 'package:hire_knock/core/app_services/app_local_notification.dart';
 import 'package:hire_knock/controllers/user_account_controller/user_account_controller.dart';
 import 'package:hire_knock/utils/logger.dart';
 

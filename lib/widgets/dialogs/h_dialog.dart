@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hire_knock/app_services/navigator_service.dart';
+import 'package:hire_knock/core/app_services/navigator_service.dart';
 import 'package:hire_knock/widgets/button/h_button.dart';
 import 'package:hire_knock/widgets/text/h_text.dart';
 

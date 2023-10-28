@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hire_knock/app_route/app_router.dart';
-import 'package:hire_knock/app_services/navigator_service.dart';
+import 'package:hire_knock/core/app_route/app_router.dart';
+import 'package:hire_knock/core/app_services/navigator_service.dart';
 import 'package:hire_knock/controllers/login_controller/login_controller.dart';
 import 'package:hire_knock/models/country_code/country_code.dart';
 import 'package:hire_knock/widgets/button/h_button.dart';

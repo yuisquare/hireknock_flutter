@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:hire_knock/app_constants/app_snackbar.dart';
-import 'package:hire_knock/app_route/app_router.dart';
-import 'package:hire_knock/app_services/navigator_service.dart';
+import 'package:hire_knock/core/app_constants/app_snackbar.dart';
+import 'package:hire_knock/core/app_route/app_router.dart';
+import 'package:hire_knock/core/app_services/navigator_service.dart';
 
 class OtpController extends GetxController {
   Future<void> sendOtp({

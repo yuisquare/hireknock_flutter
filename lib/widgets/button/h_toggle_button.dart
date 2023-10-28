@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hire_knock/widgets/container/h_container.dart';
 
-import '../../app_constants/app_colors.dart';
+import '../../core/app_constants/app_colors.dart';
 import '../text/h_text.dart';
 
 class HToggleButtonMobile extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:hire_knock/app_route/auth_guard.dart';
+import 'package:hire_knock/core/app_route/auth_guard.dart';
 import 'package:hire_knock/enums/enums.dart';
 import 'package:hire_knock/screens/error_screen/env_error_screen.dart';
 import 'package:hire_knock/screens/login/login_screen.dart';
