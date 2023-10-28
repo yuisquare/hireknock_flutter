@@ -3,13 +3,12 @@ import '../text/h_text.dart';
 
 class HCheckbox extends StatelessWidget {
   const HCheckbox(
-      {Key? key,
+      {super.key,
       required this.value,
       required this.onChecked,
       this.size = 24,
       this.label,
-      this.labelSize})
-      : super(key: key);
+      this.labelSize});
 
   final bool value;
   final String? label;

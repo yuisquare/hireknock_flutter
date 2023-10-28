@@ -9,18 +9,17 @@ class HChip extends StatelessWidget {
   final Color borderColor;
   final double fontSize;
   const HChip(
-      {Key? key,
+      {super.key,
       required this.text,
       required this.backgroundColor,
       this.textColor = Colors.white,
       this.borderColor = Colors.black,
-      this.fontSize = 20})
-      : super(key: key);
+      this.fontSize = 20});
 
   @override
   Widget build(BuildContext context) {
     return HContainer(
-      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 4),
       color: backgroundColor,
       border: Border.all(color: borderColor),
       borderRadius: BorderRadius.circular(200),

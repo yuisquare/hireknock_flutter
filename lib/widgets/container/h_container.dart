@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class HContainer extends StatelessWidget {
   const HContainer({
-    Key? key,
+    super.key,
     this.color,
     this.width,
     this.height,
@@ -18,7 +18,7 @@ class HContainer extends StatelessWidget {
     this.isAnimated = false,
     this.shape = BoxShape.rectangle,
     this.border,
-  }) : super(key: key);
+  });
 
   final Color? color;
   final double? width;

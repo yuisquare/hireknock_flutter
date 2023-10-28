@@ -7,7 +7,7 @@ import 'input_style.dart';
 
 class HInputDropdownField<T> extends StatelessWidget {
   const HInputDropdownField({
-    Key? key,
+    super.key,
     this.hintText,
     this.label,
     this.disabledHint,
@@ -34,7 +34,7 @@ class HInputDropdownField<T> extends StatelessWidget {
     required this.items,
     this.value,
     this.contentPadding,
-  }) : super(key: key);
+  });
 
   final TextEditingController? controller;
   final String? Function(String?)? validator;

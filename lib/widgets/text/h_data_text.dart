@@ -5,7 +5,7 @@ import '../spacing/h_space.dart';
 
 class HDataText extends StatelessWidget {
   const HDataText({
-    Key? key,
+    super.key,
     // required this.labels,
     // required this.values,
     required this.rows,
@@ -18,7 +18,7 @@ class HDataText extends StatelessWidget {
     this.valueWidth = 400,
     this.valueSuffix,
     this.color,
-  }) : super(key: key);
+  });
 
   // final List<String> labels;
   // final List<String> values;
@@ -42,9 +42,9 @@ class HDataText extends StatelessWidget {
     // } else {
     return Table(
       columnWidths: {
-        0: IntrinsicColumnWidth(),
+        0: const IntrinsicColumnWidth(),
         1: FixedColumnWidth(dataSpace),
-        2: FlexColumnWidth(),
+        2: const FlexColumnWidth(),
       },
       // border: TableBorder.all(color: Colors.black),
       children: List.generate(rows.where((element) => element.visible).length,
@@ -167,7 +167,7 @@ class HDataText extends StatelessWidget {
 
   HText _buildValueText(HDataTextRow row) {
     return HText(
-      text: "${row.value}",
+      text: row.value,
       fontSize: fontSize,
       fontWeight: valueFontWeight,
       color: row.color ?? color,

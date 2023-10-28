@@ -33,10 +33,10 @@ class HDialog {
                     isHeader: true,
                   ),
                 ),
-          contentPadding: EdgeInsets.all(20),
+          contentPadding: const EdgeInsets.all(20),
           content: content,
           actionsAlignment: MainAxisAlignment.center,
-          actionsPadding: EdgeInsets.symmetric(vertical: 15),
+          actionsPadding: const EdgeInsets.symmetric(vertical: 15),
           actions: actions ??
               [
                 if (enableCancel)

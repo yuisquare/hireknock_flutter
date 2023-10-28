@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:hire_knock/core/app_constants/app_colors.dart';
+import 'package:hire_knock/core/app_route/app_router.dart';
+import 'package:hire_knock/core/app_services/navigator_service.dart';
 import 'package:hire_knock/enums/enums.dart';
 import 'package:hire_knock/screens/applied_job/applied_job_screen.dart';
 import 'package:hire_knock/screens/explore_screen/explore_screen.dart';
@@ -88,7 +90,9 @@ class _TabScreenState extends State<TabScreen> {
           ),
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                NavigatorService.push(const NotificationRoute());
+              },
               icon: const Icon(
                 CupertinoIcons.bell,
               ),

@@ -3,12 +3,12 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 class HListBuilder<T> extends StatelessWidget {
   const HListBuilder({
-    Key? key,
+    super.key,
     required this.pageingController,
     required this.itemBuilder,
     this.padding,
     this.emptyBuilder,
-  }) : super(key: key);
+  });
 
   final PagingController<int, T> pageingController;
   final Widget Function(BuildContext, T, int) itemBuilder;

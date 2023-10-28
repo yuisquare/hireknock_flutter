@@ -16,7 +16,7 @@ import 'package:auto_route/auto_route.dart';
 
 @RoutePage()
 class SecurityCheckScreen extends StatefulWidget {
-  const SecurityCheckScreen({Key? key}) : super(key: key);
+  const SecurityCheckScreen({super.key});
 
   @override
   State<SecurityCheckScreen> createState() => _SecurityCheckScreenState();

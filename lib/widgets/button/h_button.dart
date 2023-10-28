@@ -6,7 +6,7 @@ import 'package:hire_knock/widgets/text/h_text.dart';
 
 class HButton extends StatelessWidget {
   const HButton({
-    Key? key,
+    super.key,
     required this.onPress,
     required this.text,
     this.padding,
@@ -19,7 +19,7 @@ class HButton extends StatelessWidget {
     this.height,
     this.elevation,
     this.enabled = true,
-  }) : super(key: key);
+  });
 
   final Function()? onPress;
   final String text;
@@ -56,7 +56,7 @@ class HButton extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            prefixIcon ?? SizedBox(),
+            prefixIcon ?? const SizedBox(),
             if (prefixIcon != null) HSpace.horizonital(10),
             HText(
               textAlign: TextAlign.center,
@@ -66,7 +66,7 @@ class HButton extends StatelessWidget {
               fontWeight: FontWeight.w600,
               isHeader: false,
             ),
-            suffixIcon ?? SizedBox(),
+            suffixIcon ?? const SizedBox(),
             if (suffixIcon != null) HSpace.horizonital(10),
           ],
         ),

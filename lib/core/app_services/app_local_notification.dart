@@ -36,13 +36,13 @@ class AppLocalNotification {
   static void display(RemoteMessage message) async {
     if (kIsWeb) return;
     try {
-      var android = AndroidNotificationDetails(
-        "quizly",
-        "Quizly",
+      var android = const AndroidNotificationDetails(
+        "hireknock",
+        "HireKnock",
         importance: Importance.max,
         priority: Priority.high,
         color: AppColor.secondary,
-        styleInformation: const BigTextStyleInformation(''),
+        styleInformation: BigTextStyleInformation(''),
       );
 
       var iOS = const DarwinNotificationDetails();

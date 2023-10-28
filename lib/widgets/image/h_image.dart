@@ -14,14 +14,14 @@ enum ImageType {
 
 class HImage extends StatelessWidget {
   const HImage({
-    Key? key,
+    super.key,
     required this.path,
     required this.imageType,
     this.height,
     this.width,
     this.byte,
     this.fit,
-  }) : super(key: key);
+  });
 
   final String path;
   final ImageType imageType;
@@ -40,7 +40,7 @@ class HImage extends StatelessWidget {
           height: height,
           fit: fit,
           errorWidget: (context, _, __) {
-            return Image.asset(AppImage.baseUrlImages + 'AppImage.defaultMan');
+            return Image.asset('${AppImage.baseUrlImages}AppImage.defaultMan');
           },
         );
       case ImageType.asset:

@@ -3,7 +3,7 @@ import 'package:auto_route/auto_route.dart';
 
 @RoutePage()
 class EnvErrorScreen extends StatelessWidget {
-  const EnvErrorScreen({Key? key}) : super(key: key);
+  const EnvErrorScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

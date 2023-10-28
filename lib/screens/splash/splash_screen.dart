@@ -6,7 +6,7 @@ import 'package:auto_route/auto_route.dart';
 
 @RoutePage()
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();

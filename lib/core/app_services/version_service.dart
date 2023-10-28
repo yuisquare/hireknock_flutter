@@ -4,7 +4,7 @@ import 'package:hire_knock/utils/logger.dart';
 class VersionService{
   final FirebaseFirestore firestore;
 
-  VersionService() : this.firestore = FirebaseFirestore.instance;
+  VersionService() : firestore = FirebaseFirestore.instance;
 
   Future<Map<String, dynamic>?> getVersion() async {
     Logger.info('getVersion: ');
@@ -17,8 +17,9 @@ class VersionService{
           documentSnapshot.data()!.isNotEmpty) {
         Map<String, dynamic>? map = documentSnapshot.data();
         return map;
-      } else
+      } else {
         return null;
+      }
     } on Exception catch (e) {
       Logger.error(e);
       return null;

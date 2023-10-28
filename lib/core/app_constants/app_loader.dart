@@ -19,7 +19,7 @@ class AppLoader {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  HProgressIndicator(),
+                  const HProgressIndicator(),
                   const SizedBox(height: 10),
                   Text(
                     title ?? 'Loading...',

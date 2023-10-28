@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hire_knock/widgets/text/h_text.dart';
 
 class HLinkButton extends StatelessWidget {
-  const HLinkButton({Key? key, required this.onPressed, required this.text})
-      : super(key: key);
+  const HLinkButton({super.key, required this.onPressed, required this.text});
 
   final Function() onPressed;
   final String text;

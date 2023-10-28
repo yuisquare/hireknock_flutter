@@ -7,12 +7,12 @@ import 'package:package_info_plus/package_info_plus.dart';
 class Utils {
   static String indianFormatCurrency(num amount) {
     var indiaCurrency = NumberFormat("####,##,##,##0.00", "en_US");
-    return "₹ " + indiaCurrency.format(amount); //10,00,00,000.00
+    return "₹ ${indiaCurrency.format(amount)}"; //10,00,00,000.00
   }
 
   static String indianFormatCurrencyWithoutDecimal(num amount) {
     var indiaCurrency = NumberFormat("####,##,##,##0", "en_US");
-    return "₹ " + indiaCurrency.format(amount); //10,00,00,000
+    return "₹ ${indiaCurrency.format(amount)}"; //10,00,00,000
   }
 
   static String capitalizeName(String name) {

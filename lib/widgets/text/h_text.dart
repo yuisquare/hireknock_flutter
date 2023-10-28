@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class HText extends StatelessWidget {
   const HText({
-    Key? key,
+    super.key,
     required this.text,
     this.fontSize,
     this.color,
@@ -20,7 +20,7 @@ class HText extends StatelessWidget {
     this.textAlign,
     this.isHeader = false,
     this.maxLines,
-  }) : super(key: key);
+  });
 
   final String text;
   final double? fontSize;

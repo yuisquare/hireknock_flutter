@@ -7,8 +7,11 @@ enum HireKnockAnimation {
 }
 
 class HAnimation extends StatelessWidget {
-  const HAnimation({Key? key, required this.animation, required this.child})
-      : super(key: key);
+  const HAnimation({
+    super.key,
+    required this.animation,
+    required this.child,
+  });
 
   final HireKnockAnimation animation;
   final Widget child;

@@ -12,14 +12,14 @@ enum CardColor {
 
 class HCard extends StatelessWidget {
   const HCard({
-    Key? key,
+    super.key,
     required this.cardColor,
     this.width,
     this.height,
     this.borderRadius = 30,
     this.elevation = 12,
     required this.child,
-  }) : super(key: key);
+  });
   final CardColor cardColor;
   final double? width;
   final double? height;

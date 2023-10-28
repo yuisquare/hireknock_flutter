@@ -9,8 +9,7 @@ enum ProgressType {
 }
 
 class HProgressIndicator extends StatelessWidget {
-  const HProgressIndicator({Key? key, this.type = ProgressType.ballPulseSync})
-      : super(key: key);
+  const HProgressIndicator({super.key, this.type = ProgressType.ballPulseSync});
 
   final ProgressType type;
 
@@ -26,7 +25,7 @@ class HProgressIndicator extends StatelessWidget {
           color: Colors.grey.shade300,
         );
       case ProgressType.ballPulseSync:
-        return SizedBox(
+        return const SizedBox(
           width: 80,
           child: LoadingIndicator(
             indicatorType: Indicator.ballPulseSync,

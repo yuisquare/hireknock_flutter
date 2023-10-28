@@ -6,7 +6,7 @@ import '../text/h_text.dart';
 
 class HToggleButtonMobile extends StatefulWidget {
   const HToggleButtonMobile({
-    Key? key,
+    super.key,
     required this.items,
     required this.onChanged,
     this.width,
@@ -17,7 +17,7 @@ class HToggleButtonMobile extends StatefulWidget {
     required this.initialValue,
     this.padding,
     this.fontSize,
-  }) : super(key: key);
+  });
 
   final List<String> items;
   final String initialValue;
@@ -63,7 +63,7 @@ class _HToggleButtonMobileState extends State<HToggleButtonMobile> {
             padding: widget.padding ??
                 const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             border: _isSelected(widget.items[index])
-                ? Border(
+                ? const Border(
                     bottom: BorderSide(color: AppColor.secondary, width: 3.0))
                 : const Border(bottom: BorderSide(color: Colors.black26, width: 2.0)),
             child: Center(
