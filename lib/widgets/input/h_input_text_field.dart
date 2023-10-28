@@ -7,7 +7,7 @@ import 'input_style.dart';
 
 class HInputTextField extends StatelessWidget {
   const HInputTextField({
-    Key? key,
+    super.key,
     this.hintText,
     this.label,
     this.disabledHint,
@@ -36,7 +36,8 @@ class HInputTextField extends StatelessWidget {
     this.isRequired = false,
     this.validator,
     this.contentPadding,
-  }) : super(key: key);
+    this.textAlign = TextAlign.start,
+  });
 
   final TextEditingController? controller;
   final String? Function(String?)? validator;
@@ -68,6 +69,7 @@ class HInputTextField extends StatelessWidget {
   final TextInputType? keyboardType;
   final bool isRequired;
   final EdgeInsetsGeometry? contentPadding;
+  final TextAlign textAlign;
 
   @override
   Widget build(BuildContext context) {
@@ -98,6 +100,7 @@ class HInputTextField extends StatelessWidget {
         fontSize: fontSize,
         color: AppColor.fieldTextColor,
       ),
+      textAlign: textAlign,
       decoration: InputStyle.getInputDecoration(
         labelText: label,
         filled: filled,

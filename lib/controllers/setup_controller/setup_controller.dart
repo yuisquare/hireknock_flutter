@@ -21,7 +21,6 @@ class SetupController {
   static void getSavedUserData() {
     Logger.info('Searching saved user data');
     String? userData = AppStorage.getData('userData');
-    String? selectedRole = AppStorage.getData('selectedRole');
     if (userData != null) {
       Logger.info('Found saved user data');
       try {

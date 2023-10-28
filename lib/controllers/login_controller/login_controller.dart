@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hire_knock/api_services/onboard_api_service.dart';
 import 'package:hire_knock/app_constants/app_snackbar.dart';
-import 'package:hire_knock/app_route/app_router.gr.dart';
+import 'package:hire_knock/app_route/app_router.dart';
 import 'package:hire_knock/app_services/navigator_service.dart';
 import 'package:hire_knock/controllers/user_account_controller/user_account_controller.dart';
 import 'package:hire_knock/models/country_code/country_code.dart';
@@ -61,7 +61,7 @@ class LoginController extends GetxController {
         _userController.selectUser(user);
       }
     } else {
-      NavigatorService.push(SecurityCheckScreen());
+      NavigatorService.push(const SecurityCheckRoute());
     }
   }
 
@@ -75,7 +75,7 @@ class LoginController extends GetxController {
     );
     if (user != null) {
       _userController.selectUser(user);
-      NavigatorService.replaceAll([HomeScreen()]);
+      NavigatorService.replaceAll([HomeRoute()]);
     }
   }
 

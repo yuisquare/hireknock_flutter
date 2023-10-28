@@ -6,7 +6,9 @@ import 'package:hire_knock/widgets/button/h_link_button.dart';
 import 'package:hire_knock/widgets/input/h_input_text_field.dart';
 import 'package:hire_knock/widgets/spacing/h_space.dart';
 import 'package:hire_knock/widgets/text/h_text.dart';
+import 'package:auto_route/auto_route.dart';
 
+@RoutePage()
 class OtpScreen extends StatefulWidget {
   const OtpScreen({
     super.key,
@@ -72,11 +74,15 @@ class _OtpScreenState extends State<OtpScreen> {
                     hintText: '',
                     controller: otpController,
                     keyboardType: TextInputType.phone,
+                    textAlign: TextAlign.center,
+                    maxLength: 6,
                   ),
                   HSpace.vertical(20),
                   HButton(
-                    onPress: () =>
-                        controller.verifyOtp(onSubmit: widget.onSubmit),
+                    onPress: () => controller.verifyOtp(
+                      onSubmit: widget.onSubmit,
+                      userOtp: otpController.text,
+                    ),
                     text: 'Submit',
                     width: double.infinity,
                     height: 45,
@@ -87,11 +93,13 @@ class _OtpScreenState extends State<OtpScreen> {
                     color: Colors.black,
                   ),
                   HLinkButton(
-                    onPressed:()=> controller.sendOtp(phone: widget.phoneNumber),
+                    onPressed: () =>
+                        controller.sendOtp(phone: widget.phoneNumber),
                     text: 'Resend code by SMS',
                   ),
                   HLinkButton(
-                    onPressed:()=> controller.sendOtpByPhoneCall(phone: widget.phoneNumber),
+                    onPressed: () => controller.sendOtpByPhoneCall(
+                        phone: widget.phoneNumber),
                     text: 'Resend code by Phone Call',
                   ),
                 ],

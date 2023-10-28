@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hire_knock/app_constants/app_colors.dart';
-import 'package:hire_knock/widgets/container/h_container.dart';
 import '../text/h_text.dart';
 
 class HCheckbox extends StatelessWidget {

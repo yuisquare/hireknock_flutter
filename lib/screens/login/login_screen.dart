@@ -15,9 +15,11 @@ import 'package:hire_knock/widgets/image/h_image.dart';
 import 'package:hire_knock/widgets/input/h_input_text_field.dart';
 import 'package:hire_knock/widgets/spacing/h_space.dart';
 import 'package:hire_knock/widgets/text/h_text.dart';
+import 'package:auto_route/auto_route.dart';
 
 final _authController = Get.put(AuthController());
 
+@RoutePage()
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 

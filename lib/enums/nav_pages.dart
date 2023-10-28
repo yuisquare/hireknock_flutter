@@ -1,5 +1,0 @@
-
-enum MobileNavPage {
-  home,
-  settings,
-}

@@ -45,7 +45,7 @@ class InputStyle {
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(borderRadius ?? 10),
         borderSide: BorderSide(
-          color: borderColor ?? AppColor.primaryColor,
+          color: borderColor ?? AppColor.primary,
         ),
       ),
       enabledBorder: OutlineInputBorder(

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hire_knock/app_route/app_router.gr.dart';
+import 'package:hire_knock/app_route/app_router.dart';
 import 'package:hire_knock/app_services/navigator_service.dart';
 import 'package:hire_knock/controllers/login_controller/login_controller.dart';
 import 'package:hire_knock/models/country_code/country_code.dart';
@@ -12,7 +12,9 @@ import 'package:hire_knock/widgets/input/h_input_dropdown_field.dart';
 import 'package:hire_knock/widgets/input/h_input_text_field.dart';
 import 'package:hire_knock/widgets/spacing/h_space.dart';
 import 'package:hire_knock/widgets/text/h_text.dart';
+import 'package:auto_route/auto_route.dart';
 
+@RoutePage()
 class SecurityCheckScreen extends StatefulWidget {
   const SecurityCheckScreen({Key? key}) : super(key: key);
 
@@ -98,7 +100,7 @@ class _SecurityCheckScreenState extends State<SecurityCheckScreen> {
                   HSpace.vertical(20),
                   HButton(
                     onPress: () {
-                      NavigatorService.push(OtpScreen(
+                      NavigatorService.push(OtpRoute(
                         phoneNumber: controller.getPhoneNumber(),
                         onSubmit: controller.securityCheckSubmit,
                       ));

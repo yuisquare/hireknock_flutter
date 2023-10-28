@@ -13,7 +13,7 @@ import 'package:hire_knock/app_constants/app_colors.dart';
 import 'package:hire_knock/app_constants/app_loader.dart';
 import 'package:hire_knock/app_constants/app_snackbar.dart';
 import 'package:hire_knock/app_constants/app_storage.dart';
-import 'package:hire_knock/app_route/app_router.gr.dart';
+import 'package:hire_knock/app_route/app_router.dart';
 import 'package:hire_knock/app_services/navigator_service.dart';
 import 'package:hire_knock/controllers/user_account_controller/user_account_controller.dart';
 import 'package:hire_knock/utils/logger.dart';
@@ -125,7 +125,7 @@ class AuthController extends GetxController {
     AppStorage.removeData(key: 'selectedRole');
     _userAccountController.userData.value = null;
     AppLoader.close();
-    NavigatorService.replace(const LoginScreen());
+    NavigatorService.replace(const LoginRoute());
   }
 
 //force update
@@ -171,7 +171,7 @@ class AuthController extends GetxController {
           ElevatedButton(
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(
-                AppColor.accentColor,
+                AppColor.primary,
               ),
             ),
             child: const HText(

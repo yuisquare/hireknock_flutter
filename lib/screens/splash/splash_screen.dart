@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hire_knock/app_constants/app_images.dart';
 import 'package:hire_knock/controllers/splash_controller/splash_controller.dart';
 import 'package:hire_knock/widgets/animation/h_animation.dart';
-import 'package:hire_knock/widgets/image/h_image.dart';
 import 'package:hire_knock/widgets/text/h_text.dart';
+import 'package:auto_route/auto_route.dart';
 
+@RoutePage()
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: HAnimation(
           animation: HireKnockAnimation.zoomIn,

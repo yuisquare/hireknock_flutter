@@ -1,192 +1,148 @@
-// **************************************************************************
-// AutoRouteGenerator
-// **************************************************************************
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
-// AutoRouteGenerator
+// AutoRouterGenerator
 // **************************************************************************
-//
+
 // ignore_for_file: type=lint
+// coverage:ignore-file
 
-// ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i7;
-import 'package:flutter/material.dart' as _i8;
+part of 'app_router.dart';
 
-import '../screens/error_screen/env_error_screen.dart' as _i6;
-import '../screens/home/home_screen.dart' as _i5;
-import '../screens/login/login_screen.dart' as _i2;
-import '../screens/login/security_check_screen.dart' as _i3;
-import '../screens/otp/otp_screen.dart' as _i4;
-import '../screens/splash/splash_screen.dart' as _i1;
-import 'auth_guard.dart' as _i9;
-
-class AppRouter extends _i7.RootStackRouter {
-  AppRouter({
-    _i8.GlobalKey<_i8.NavigatorState>? navigatorKey,
-    required this.authGuard,
-  }) : super(navigatorKey);
-
-  final _i9.AuthGuard authGuard;
+abstract class _$AppRouter extends RootStackRouter {
+  // ignore: unused_element
+  _$AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i7.PageFactory> pagesMap = {
-    SplashScreen.name: (routeData) {
-      return _i7.CustomPage<dynamic>(
+  final Map<String, PageFactory> pagesMap = {
+    EnvErrorRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.SplashScreen(),
-        transitionsBuilder: _i7.TransitionsBuilders.noTransition,
-        opaque: true,
-        barrierDismissible: false,
+        child: const EnvErrorScreen(),
       );
     },
-    LoginScreen.name: (routeData) {
-      return _i7.CustomPage<dynamic>(
+    HomeRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.LoginScreen(),
-        transitionsBuilder: _i7.TransitionsBuilders.noTransition,
-        opaque: true,
-        barrierDismissible: false,
+        child: const HomeScreen(),
       );
     },
-    SecurityCheckScreen.name: (routeData) {
-      return _i7.CustomPage<dynamic>(
+    LoginRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.SecurityCheckScreen(),
-        transitionsBuilder: _i7.TransitionsBuilders.noTransition,
-        opaque: true,
-        barrierDismissible: false,
+        child: const LoginScreen(),
       );
     },
-    OtpScreen.name: (routeData) {
-      final args = routeData.argsAs<OtpScreenArgs>();
-      return _i7.CustomPage<dynamic>(
+    OtpRoute.name: (routeData) {
+      final args = routeData.argsAs<OtpRouteArgs>();
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i4.OtpScreen(
+        child: OtpScreen(
           key: args.key,
           phoneNumber: args.phoneNumber,
           onSubmit: args.onSubmit,
         ),
-        transitionsBuilder: _i7.TransitionsBuilders.noTransition,
-        opaque: true,
-        barrierDismissible: false,
       );
     },
-    HomeScreen.name: (routeData) {
-      return _i7.CustomPage<dynamic>(
+    SecurityCheckRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i5.HomeScreen(),
-        transitionsBuilder: _i7.TransitionsBuilders.noTransition,
-        opaque: true,
-        barrierDismissible: false,
+        child: const SecurityCheckScreen(),
       );
     },
-    EnvErrorScreen.name: (routeData) {
-      return _i7.CustomPage<dynamic>(
+    SplashRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.EnvErrorScreen(),
-        transitionsBuilder: _i7.TransitionsBuilders.noTransition,
-        opaque: true,
-        barrierDismissible: false,
+        child: const SplashScreen(),
+      );
+    },
+    TabRoute.name: (routeData) {
+      final args =
+          routeData.argsAs<TabRouteArgs>(orElse: () => const TabRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: TabScreen(
+          key: args.key,
+          screen: args.screen,
+        ),
       );
     },
   };
-
-  @override
-  List<_i7.RouteConfig> get routes => [
-        _i7.RouteConfig(
-          SplashScreen.name,
-          path: '/',
-        ),
-        _i7.RouteConfig(
-          LoginScreen.name,
-          path: '/login',
-        ),
-        _i7.RouteConfig(
-          SecurityCheckScreen.name,
-          path: '/security_check',
-        ),
-        _i7.RouteConfig(
-          OtpScreen.name,
-          path: '/verification',
-        ),
-        _i7.RouteConfig(
-          HomeScreen.name,
-          path: '/home',
-          guards: [authGuard],
-        ),
-        _i7.RouteConfig(
-          EnvErrorScreen.name,
-          path: '/env_error',
-        ),
-      ];
 }
 
 /// generated route for
-/// [_i1.SplashScreen]
-class SplashScreen extends _i7.PageRouteInfo<void> {
-  const SplashScreen()
+/// [EnvErrorScreen]
+class EnvErrorRoute extends PageRouteInfo<void> {
+  const EnvErrorRoute({List<PageRouteInfo>? children})
       : super(
-          SplashScreen.name,
-          path: '/',
+          EnvErrorRoute.name,
+          initialChildren: children,
         );
 
-  static const String name = 'SplashScreen';
+  static const String name = 'EnvErrorRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i2.LoginScreen]
-class LoginScreen extends _i7.PageRouteInfo<void> {
-  const LoginScreen()
+/// [HomeScreen]
+class HomeRoute extends PageRouteInfo<void> {
+  const HomeRoute({List<PageRouteInfo>? children})
       : super(
-          LoginScreen.name,
-          path: '/login',
+          HomeRoute.name,
+          initialChildren: children,
         );
 
-  static const String name = 'LoginScreen';
+  static const String name = 'HomeRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i3.SecurityCheckScreen]
-class SecurityCheckScreen extends _i7.PageRouteInfo<void> {
-  const SecurityCheckScreen()
+/// [LoginScreen]
+class LoginRoute extends PageRouteInfo<void> {
+  const LoginRoute({List<PageRouteInfo>? children})
       : super(
-          SecurityCheckScreen.name,
-          path: '/security_check',
+          LoginRoute.name,
+          initialChildren: children,
         );
 
-  static const String name = 'SecurityCheckScreen';
+  static const String name = 'LoginRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i4.OtpScreen]
-class OtpScreen extends _i7.PageRouteInfo<OtpScreenArgs> {
-  OtpScreen({
-    _i8.Key? key,
+/// [OtpScreen]
+class OtpRoute extends PageRouteInfo<OtpRouteArgs> {
+  OtpRoute({
+    Key? key,
     required String phoneNumber,
     required dynamic Function() onSubmit,
+    List<PageRouteInfo>? children,
   }) : super(
-          OtpScreen.name,
-          path: '/verification',
-          args: OtpScreenArgs(
+          OtpRoute.name,
+          args: OtpRouteArgs(
             key: key,
             phoneNumber: phoneNumber,
             onSubmit: onSubmit,
           ),
+          initialChildren: children,
         );
 
-  static const String name = 'OtpScreen';
+  static const String name = 'OtpRoute';
+
+  static const PageInfo<OtpRouteArgs> page = PageInfo<OtpRouteArgs>(name);
 }
 
-class OtpScreenArgs {
-  const OtpScreenArgs({
+class OtpRouteArgs {
+  const OtpRouteArgs({
     this.key,
     required this.phoneNumber,
     required this.onSubmit,
   });
 
-  final _i8.Key? key;
+  final Key? key;
 
   final String phoneNumber;
 
@@ -194,30 +150,71 @@ class OtpScreenArgs {
 
   @override
   String toString() {
-    return 'OtpScreenArgs{key: $key, phoneNumber: $phoneNumber, onSubmit: $onSubmit}';
+    return 'OtpRouteArgs{key: $key, phoneNumber: $phoneNumber, onSubmit: $onSubmit}';
   }
 }
 
 /// generated route for
-/// [_i5.HomeScreen]
-class HomeScreen extends _i7.PageRouteInfo<void> {
-  const HomeScreen()
+/// [SecurityCheckScreen]
+class SecurityCheckRoute extends PageRouteInfo<void> {
+  const SecurityCheckRoute({List<PageRouteInfo>? children})
       : super(
-          HomeScreen.name,
-          path: '/home',
+          SecurityCheckRoute.name,
+          initialChildren: children,
         );
 
-  static const String name = 'HomeScreen';
+  static const String name = 'SecurityCheckRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i6.EnvErrorScreen]
-class EnvErrorScreen extends _i7.PageRouteInfo<void> {
-  const EnvErrorScreen()
+/// [SplashScreen]
+class SplashRoute extends PageRouteInfo<void> {
+  const SplashRoute({List<PageRouteInfo>? children})
       : super(
-          EnvErrorScreen.name,
-          path: '/env_error',
+          SplashRoute.name,
+          initialChildren: children,
         );
 
-  static const String name = 'EnvErrorScreen';
+  static const String name = 'SplashRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [TabScreen]
+class TabRoute extends PageRouteInfo<TabRouteArgs> {
+  TabRoute({
+    Key? key,
+    TabScreens? screen,
+    List<PageRouteInfo>? children,
+  }) : super(
+          TabRoute.name,
+          args: TabRouteArgs(
+            key: key,
+            screen: screen,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'TabRoute';
+
+  static const PageInfo<TabRouteArgs> page = PageInfo<TabRouteArgs>(name);
+}
+
+class TabRouteArgs {
+  const TabRouteArgs({
+    this.key,
+    this.screen,
+  });
+
+  final Key? key;
+
+  final TabScreens? screen;
+
+  @override
+  String toString() {
+    return 'TabRouteArgs{key: $key, screen: $screen}';
+  }
 }

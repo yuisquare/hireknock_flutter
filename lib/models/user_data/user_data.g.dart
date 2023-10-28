@@ -7,6 +7,8 @@ part of 'user_data.dart';
 // **************************************************************************
 
 abstract class _$UserDataCWProxy {
+  UserData uid(String? uid);
+
   UserData email(String? email);
 
   UserData fullname(String? fullname);
@@ -17,8 +19,6 @@ abstract class _$UserDataCWProxy {
 
   UserData photoUrl(String? photoUrl);
 
-  UserData uid(String? uid);
-
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserData(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
   ///
   /// Usage
@@ -26,20 +26,23 @@ abstract class _$UserDataCWProxy {
   /// UserData(...).copyWith(id: 12, name: "My name")
   /// ````
   UserData call({
+    String? uid,
     String? email,
     String? fullname,
     String? linkedinUrl,
     String? mobileNo,
     String? photoUrl,
-    String? uid,
   });
 }
 
 /// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfUserData.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfUserData.copyWith.fieldName(...)`
 class _$UserDataCWProxyImpl implements _$UserDataCWProxy {
+  const _$UserDataCWProxyImpl(this._value);
+
   final UserData _value;
 
-  const _$UserDataCWProxyImpl(this._value);
+  @override
+  UserData uid(String? uid) => this(uid: uid);
 
   @override
   UserData email(String? email) => this(email: email);
@@ -57,9 +60,6 @@ class _$UserDataCWProxyImpl implements _$UserDataCWProxy {
   UserData photoUrl(String? photoUrl) => this(photoUrl: photoUrl);
 
   @override
-  UserData uid(String? uid) => this(uid: uid);
-
-  @override
 
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserData(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
   ///
@@ -68,14 +68,18 @@ class _$UserDataCWProxyImpl implements _$UserDataCWProxy {
   /// UserData(...).copyWith(id: 12, name: "My name")
   /// ````
   UserData call({
+    Object? uid = const $CopyWithPlaceholder(),
     Object? email = const $CopyWithPlaceholder(),
     Object? fullname = const $CopyWithPlaceholder(),
     Object? linkedinUrl = const $CopyWithPlaceholder(),
     Object? mobileNo = const $CopyWithPlaceholder(),
     Object? photoUrl = const $CopyWithPlaceholder(),
-    Object? uid = const $CopyWithPlaceholder(),
   }) {
     return UserData(
+      uid: uid == const $CopyWithPlaceholder()
+          ? _value.uid
+          // ignore: cast_nullable_to_non_nullable
+          : uid as String?,
       email: email == const $CopyWithPlaceholder()
           ? _value.email
           // ignore: cast_nullable_to_non_nullable
@@ -96,10 +100,6 @@ class _$UserDataCWProxyImpl implements _$UserDataCWProxy {
           ? _value.photoUrl
           // ignore: cast_nullable_to_non_nullable
           : photoUrl as String?,
-      uid: uid == const $CopyWithPlaceholder()
-          ? _value.uid
-          // ignore: cast_nullable_to_non_nullable
-          : uid as String?,
     );
   }
 }

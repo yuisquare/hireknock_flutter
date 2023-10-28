@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:hire_knock/api_services/hire_knock_api_service.dart';
 import 'package:hire_knock/controllers/auth_controller/auth_controller.dart';
 import 'package:hire_knock/controllers/user_account_controller/user_account_controller.dart';
-import '../../app_route/app_router.gr.dart';
+import '../../app_route/app_router.dart';
 import '../../app_services/navigator_service.dart';
 
 final _authController = Get.put(AuthController());
@@ -17,15 +17,15 @@ class SplashController {
       if (_authController.isLoggedIn()) {
         if (_userController.userData.value != null) {
           // NavigatorService.replaceAll([SecurityCheckScreen()]);
-          NavigatorService.replaceAll([HomeScreen()]);
+          NavigatorService.replaceAll([TabRoute()]);
         } else {
           // NavigatorService.replaceAll([SignupScreen()]);
         }
       } else {
-        NavigatorService.replaceAll([LoginScreen()]);
+        NavigatorService.replaceAll([const LoginRoute()]);
       }
     } else {
-      NavigatorService.replaceAll([EnvErrorScreen()]);
+      NavigatorService.replaceAll([const EnvErrorRoute()]);
     }
   }
 }

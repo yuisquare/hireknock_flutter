@@ -42,7 +42,7 @@ class PushNotificationService {
       String? token = await _fcm.getToken();
       Logger.success('Token Fetched');
       return token;
-    } on Exception catch (e) {
+    } on Exception {
       return null;
     }
   }
