@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:hire_knock/app_constants/app_colors.dart';
 import 'package:hire_knock/enums/enums.dart';
+import 'package:hire_knock/screens/applied_job/applied_job_screen.dart';
+import 'package:hire_knock/screens/explore_screen/explore_screen.dart';
 import 'package:hire_knock/screens/home/home_screen.dart';
+import 'package:hire_knock/screens/profile/profile_screen.dart';
 import 'package:hire_knock/widgets/container/h_container.dart';
 import 'package:hire_knock/widgets/spacing/h_space.dart';
 import 'package:hire_knock/widgets/text/h_text.dart';
@@ -28,29 +31,23 @@ class _TabScreenState extends State<TabScreen> {
       icon: Icons.home_rounded,
       view: HomeScreen(),
     ),
-    TabScreenData(
+    const TabScreenData(
       screen: TabScreens.APPLIED_JOB,
       name: 'Applied Jobs',
       icon: CupertinoIcons.doc_plaintext,
-      view: Container(
-        color: Colors.blue,
-      ),
+      view: AppliedJobScreen(),
     ),
-    TabScreenData(
+    const TabScreenData(
       screen: TabScreens.EXPLORE,
       name: 'Explore',
       icon: Icons.explore_outlined,
-      view: Container(
-        color: Colors.red,
-      ),
+      view: ExploreScreen(),
     ),
-    TabScreenData(
+    const TabScreenData(
       screen: TabScreens.PROFILE,
       name: 'Profile',
       icon: CupertinoIcons.person_alt_circle,
-      view: Container(
-        color: Colors.green,
-      ),
+      view: ProfileScreen(),
     ),
   ];
 

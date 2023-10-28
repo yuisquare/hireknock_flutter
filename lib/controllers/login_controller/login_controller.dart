@@ -75,7 +75,7 @@ class LoginController extends GetxController {
     );
     if (user != null) {
       _userController.selectUser(user);
-      NavigatorService.replaceAll([HomeRoute()]);
+      NavigatorService.replaceAll([TabRoute()]);
     }
   }
 

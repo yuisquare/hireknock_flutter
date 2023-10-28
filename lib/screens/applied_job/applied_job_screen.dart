@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:hire_knock/widgets/text/h_text.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class AppliedJobScreen extends StatelessWidget {
+  const AppliedJobScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Column(
         children: [
-          Center(child: HText(text: 'Home')),
+          Center(child: HText(text: 'Applied Job')),
         ],
       ),
     );
