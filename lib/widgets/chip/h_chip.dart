@@ -22,7 +22,7 @@ class HChip extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 4),
       color: backgroundColor,
       border: Border.all(color: borderColor),
-      borderRadius: BorderRadius.circular(200),
+      borderRadius: BorderRadius.circular(5),
       child: HText(
         text: text,
         color: textColor,

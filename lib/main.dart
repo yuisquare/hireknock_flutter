@@ -5,7 +5,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:hire_knock/core/app_services/env_service.dart';
 import 'package:hire_knock/core/app_services/navigator_service.dart';
 import 'package:hire_knock/controllers/setup_controller/setup_controller.dart';
-import 'package:hire_knock/utils/q_scroll_behavior.dart';
+import 'package:hire_knock/utils/h_scroll_behavior.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

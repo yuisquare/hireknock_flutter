@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hire_knock/core/app_constants/app_colors.dart';
 import 'package:hire_knock/widgets/text/h_text.dart';
 
 class HLinkButton extends StatelessWidget {
@@ -9,14 +10,14 @@ class HLinkButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
       onTap: onPressed,
       child: HText(
         text: text,
-        color: Colors.blue,
+        color: AppColor.buttonBlue,
         fontSize: 16,
-        fontWeight: FontWeight.w400,
-        // fontStyle: FontStyle.italic,
+        fontWeight: FontWeight.w500,
       ),
     );
   }

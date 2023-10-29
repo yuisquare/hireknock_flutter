@@ -77,7 +77,7 @@ class _TabScreenState extends State<TabScreen> {
       length: TabScreens.values.length,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: AppColor.background,
           elevation: 0,
           title: const HText(
             text: 'HireKnock',

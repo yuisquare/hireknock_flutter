@@ -27,7 +27,7 @@ class Utils {
 
   static String dateFormatWithoutTime(DateTime? date) {
     if (date != null) {
-      return DateFormat.yMMMEd().format(date);
+      return DateFormat('EEE, dd MMMM yyyy').format(date);
     } else {
       return '';
     }
